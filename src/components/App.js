@@ -3,9 +3,9 @@ import Game from './Game';
 
 function App() {
   return(
-    <React.Fragment>
+    <div className="container main">
       <Game/>
-    </React.Fragment>
+    </div>
   );
 }
 
