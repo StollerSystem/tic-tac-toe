@@ -1,3 +1,11 @@
 export default (state = {}, action) => {
-  return state;
+  switch (action.type) {
+    case 'STEP_NUMBER':
+      return Object.assign({}, state, {
+        stepNumber: action.stepNumber
+      })
+    default:
+      return state
+  }
+
 }

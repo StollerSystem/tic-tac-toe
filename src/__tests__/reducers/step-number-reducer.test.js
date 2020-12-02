@@ -6,4 +6,12 @@ describe('step-number-reducer', () => {
     expect(stepNumberReducer({}, { type: null })).toEqual({});
   })
 
+  test('Should set step number to a value', () => {
+    const action = {
+      type: 'STEP_NUMBER',
+      stepNumber: 1
+    }
+    expect(stepNumberReducer({}, action)).toEqual({stepNumber: 1})
+  })
+
 })

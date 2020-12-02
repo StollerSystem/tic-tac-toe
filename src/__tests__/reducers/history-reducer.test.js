@@ -9,11 +9,11 @@ describe ('history-reducer', () => {
     squares: squares
   };
 
-  const startingState = {
-    history: [{squares: Array(9).fill(null)}],
-    stepNumber: 0,
-    xIsNext: true
-  }
+  // const startingState = {
+  //   history: [{squares: Array(9).fill(null)}],
+  //   stepNumber: 0,
+  //   xIsNext: true
+  // }
 
   test('Should return default state if no action is triggered', () => {
     expect(historyReducer({}, { type: null})).toEqual({});
@@ -23,7 +23,5 @@ describe ('history-reducer', () => {
     expect(historyReducer({}, action)).toEqual({history: [{squares: squares}]})
   });
 
-  test('Should input an object with values', () => {
-    expect(historyReducer(startingState, action)).toEqual({history: [{squares: squares}], stepNumber: 0, xIsNext: true})
-  })
+  
 })
