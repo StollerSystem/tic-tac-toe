@@ -11,9 +11,8 @@ describe('step-number-reducer', () => {
       type: 'STEP_NUMBER',
       stepNumber: 1
     }
-    expect(stepNumberReducer({}, action)).toEqual({stepNumber: 1})
+    expect(stepNumberReducer({}, action)).toEqual(1);
   })
-
 
   test('Should jump stepNumber to specific step', () => {
     let state = {stepNumber: 8};
@@ -21,6 +20,6 @@ describe('step-number-reducer', () => {
       type: 'STEP_NUMBER',
       stepNumber: 1
     }
-    expect(stepNumberReducer(state, action)).toEqual({stepNumber: 1})
+    expect(stepNumberReducer(state, action)).toEqual(1);
   })
 })

@@ -2,7 +2,6 @@ import historyReducer from '../../reducers/history-reducer';
 
 describe ('history-reducer', () => {
 
-
   const startingHistory = [{squares: Array(9).fill(null)}];
   const squares = { squares: ['X', null, null, null, null, null, null, null, null ]};
   let action = {

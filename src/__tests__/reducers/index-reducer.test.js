@@ -8,11 +8,10 @@ let store = createStore(rootReducer)
 
 describe('rootReducer', () => {
 
-
   test('Should return default state if no action is declared', () => {
     expect(rootReducer({}, {type: null})).toEqual({
       history: [],
-      stepNumber: {},
+      stepNumber: 0,
       xIsNext: false
     });
   });
@@ -28,6 +27,4 @@ describe('rootReducer', () => {
   test('Check that initial state of xIsNextReducer matches root reducer', () => {
     expect(store.getState().xIsNext).toEqual(xIsNextReducer(undefined, { type: null }));
   }); 
-
-
 });
