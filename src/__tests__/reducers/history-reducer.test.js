@@ -9,12 +9,6 @@ describe ('history-reducer', () => {
     squares: squares
   };
 
-  // const startingState = {
-  //   history: [{squares: Array(9).fill(null)}],
-  //   stepNumber: 0,
-  //   xIsNext: true
-  // }
-
   test('Should return default state if no action is triggered', () => {
     expect(historyReducer({}, { type: null})).toEqual({});
   })

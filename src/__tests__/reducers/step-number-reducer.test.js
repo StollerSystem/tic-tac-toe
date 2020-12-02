@@ -14,4 +14,13 @@ describe('step-number-reducer', () => {
     expect(stepNumberReducer({}, action)).toEqual({stepNumber: 1})
   })
 
+
+  test('Should jump stepNumber to specific step', () => {
+    let state = {stepNumber: 8};
+    const action = {
+      type: 'STEP_NUMBER',
+      stepNumber: 1
+    }
+    expect(stepNumberReducer(state, action)).toEqual({stepNumber: 1})
+  })
 })
