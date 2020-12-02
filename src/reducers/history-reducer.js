@@ -1,4 +1,4 @@
-export default (state = [], action) => {
+export default (state = [{squares: Array(9).fill(null)}], action) => {
   const { squares } = action;
   switch (action.type) {
     case 'ADD_SQUARES':      

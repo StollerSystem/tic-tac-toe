@@ -10,7 +10,7 @@ describe('rootReducer', () => {
 
   test('Should return default state if no action is declared', () => {
     expect(rootReducer({}, {type: null})).toEqual({
-      history: [],
+      history: [{squares: Array(9).fill(null)}],
       stepNumber: 0,
       xIsNext: false
     });
