@@ -15,7 +15,5 @@ describe ('history-reducer', () => {
 
   test('Should add an object to the history array', () => {
     expect(historyReducer({}, action)).toEqual({history: [{squares: squares}]})
-  });
-
-  
+  });  
 })

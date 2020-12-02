@@ -5,11 +5,10 @@ describe ("xisnext-reducer", () => {
     expect(xIsNextReducer({}, {type: null})).toEqual({})
   })
   
-  test ("XisNext should return false", () => {
+  test ("XisNext should return true", () => {
     const action ={
-      type: "X_IS_NEXT",
-      xIsNext: true
+      type: "X_IS_NEXT"
     }
-    expect(xIsNextReducer({}, action)).toEqual({xIsNext: false})
+    expect(xIsNextReducer({}, action)).toEqual(false);
   })
 })
