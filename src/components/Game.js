@@ -47,13 +47,13 @@ class Game extends React.Component {
         'Go to game start';
       return (
         <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button className="btn btn-primary"onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
     });
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+      status = winner+" WINS!!!";
     } else {
       status = 'NEXT PLAYER: ' + (this.props.xIsNext ? 'X' : 'O');
     }
