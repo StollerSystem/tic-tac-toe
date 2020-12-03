@@ -21,12 +21,13 @@ class Game extends React.Component {
     squares[i] = this.props.xIsNext ? 'X' : 'O';
     const action1 = {
       type: 'ADD_SQUARES',
-      squares: [{ squares: squares }]
+      squares: [{ squares: squares }],
+      history: history
     }
     dispatch(action1)
     const action2 = {
       type: 'STEP_NUMBER',
-      stepNumber: history.length
+      stepNumber: history.length      
     }
     dispatch(action2)
     const action3 = {

@@ -1,8 +1,8 @@
 export default (state = [{ squares: Array(9).fill(null) }], action) => {
-  const { squares } = action;
+  const { squares, history } = action;
   switch (action.type) {
     case 'ADD_SQUARES':
-      return state.concat(squares)
+      return history.concat(squares)
     default:
       return state;
   }
