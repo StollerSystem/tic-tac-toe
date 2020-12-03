@@ -1,4 +1,5 @@
 import * as actions from './../../actions';
+import * as c from '../../actions/ActionTypes';
 
 describe('tic tac toe actions', () => {
 
@@ -6,7 +7,7 @@ describe('tic tac toe actions', () => {
     const squares = "test";
     const history = "test";
     expect(actions.addSquares(squares, history)).toEqual({
-      type: 'ADD_SQUARES',
+      type: c.ADD_SQUARES,
       squares: [{squares: squares}],
       history: history
     });
@@ -16,14 +17,14 @@ describe('tic tac toe actions', () => {
     const step = 1;
 
     expect(actions.stepNumber(step)).toEqual({
-      type: 'STEP_NUMBER',
+      type: c.STEP_NUMBER,
       stepNumber: step
     });
   });
 
   test('x is next should create X_IS_NEXT action', () => {
     expect(actions.xIsNext()).toEqual({
-      type: 'X_IS_NEXT'
+      type: c.X_IS_NEXT
     })
   })
 });

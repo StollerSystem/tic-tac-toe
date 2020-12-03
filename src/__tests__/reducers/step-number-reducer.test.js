@@ -1,4 +1,5 @@
 import stepNumberReducer from '../../reducers/step-number-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('step-number-reducer', () => {
 
@@ -8,7 +9,7 @@ describe('step-number-reducer', () => {
 
   test('Should set step number to a value', () => {
     const action = {
-      type: 'STEP_NUMBER',
+      type: c.STEP_NUMBER,
       stepNumber: 1
     }
     expect(stepNumberReducer({}, action)).toEqual(1);
@@ -17,7 +18,7 @@ describe('step-number-reducer', () => {
   test('Should jump stepNumber to specific step', () => {
     let state = { stepNumber: 8 };
     const action = {
-      type: 'STEP_NUMBER',
+      type: c.STEP_NUMBER,
       stepNumber: 1
     }
     expect(stepNumberReducer(state, action)).toEqual(1);

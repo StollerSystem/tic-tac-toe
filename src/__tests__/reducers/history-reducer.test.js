@@ -1,11 +1,12 @@
 import historyReducer from '../../reducers/history-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('history-reducer', () => {
 
   const startingHistory = [{ squares: Array(9).fill(null) }];
   const squares = { squares: ['X', null, null, null, null, null, null, null, null] };
   let action = {
-    type: 'ADD_SQUARES',
+    type: c.ADD_SQUARES,
     squares: squares,
     history: startingHistory
   };

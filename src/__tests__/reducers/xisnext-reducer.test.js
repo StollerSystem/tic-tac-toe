@@ -1,4 +1,5 @@
 import xIsNextReducer from "../../reducers/xisnext-reducer.js"
+import * as c from '../../actions/ActionTypes';
 
 describe("xisnext-reducer", () => {
   test("Should return default if no action triggered", () => {
@@ -7,7 +8,7 @@ describe("xisnext-reducer", () => {
 
   test("XisNext should return true", () => {
     const action = {
-      type: "X_IS_NEXT"
+      type: c.X_IS_NEXT
     }
     expect(xIsNextReducer({}, action)).toEqual(false);
   })

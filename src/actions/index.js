@@ -1,6 +1,8 @@
+import * as c from './ActionTypes';
+
 export const addSquares = (squares, history) => {
   return {
-    type: 'ADD_SQUARES',
+    type: c.ADD_SQUARES,
     squares: [{ squares: squares }],
     history: history
   }
@@ -8,13 +10,13 @@ export const addSquares = (squares, history) => {
 
 export const stepNumber = (step) => {
   return {
-    type: 'STEP_NUMBER',
+    type: c.STEP_NUMBER,
     stepNumber: step
   }
 }
 
 export const xIsNext = () => {
   return {
-    type: "X_IS_NEXT"
+    type: c.X_IS_NEXT
   }
 }
