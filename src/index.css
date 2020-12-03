@@ -68,14 +68,28 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+  border: solid rgb(0, 228, 0);
+  border-width: 1px;
+  padding: 20px;
 }
 
 .main {
   text-align: center;
-  place-content: center;
+  /* place-content: center; */
 }
 
 button {
-  background-color: rgb(74, 74, 74);
+  background-color: rgb(36, 36, 36);
+}
+
+.timeTravel {
+  color: rgb(0, 150, 244);
+  border: solid rgb(0, 122, 228);
+  border-width: 1px;
+  padding: 10px;
+}
+
+li {
+  margin: 5px
 }
 
