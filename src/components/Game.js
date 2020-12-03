@@ -2,6 +2,7 @@ import React from 'react';
 import Board from './Board';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as a from '../actions/index'
 
 class Game extends React.Component {
   constructor(props) {
@@ -18,34 +19,20 @@ class Game extends React.Component {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.props.xIsNext ? 'X' : 'O';
-    const action1 = {
-      type: 'ADD_SQUARES',
-      squares: [{ squares: squares }],
-      history: history
-    }
-    dispatch(action1)
-    const action2 = {
-      type: 'STEP_NUMBER',
-      stepNumber: history.length      
-    }
-    dispatch(action2)
-    const action3 = {
-      type: 'X_IS_NEXT',
-    }
-    dispatch(action3)
+    squares[i] = this.props.xIsNext ? 'X' : 'O';    
+    const action1 = a.addSquares(squares,history);
+    dispatch(action1);
+    const action2 = a.stepNumber(history.length);
+    dispatch(action2);
+    const action3 = a.xIsNext();
+    dispatch(action3);
   }
 
   jumpTo(step) {
     const { dispatch } = this.props;
-    const action1 = {
-      type: 'STEP_NUMBER',
-      stepNumber: step
-    };
+    const action1 = a.stepNumber(step);
     dispatch(action1);
-    const action2 = {
-      type: "X_IS_NEXT"
-    };
+    const action2 = a.xIsNext();
     dispatch(action2);    
   }  
 
