@@ -15,7 +15,7 @@ describe('step-number-reducer', () => {
   })
 
   test('Should jump stepNumber to specific step', () => {
-    let state = {stepNumber: 8};
+    let state = { stepNumber: 8 };
     const action = {
       type: 'STEP_NUMBER',
       stepNumber: 1

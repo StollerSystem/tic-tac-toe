@@ -4,19 +4,19 @@ import PropTypes from 'prop-types';
 
 
 class Board extends React.Component {
-  
+
   renderSquare(i) {
     return (
       <Square
         value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)} 
-     />
+        onClick={() => this.props.onClick(i)}
+      />
     );
   }
 
   render() {
     return (
-      <div>        
+      <div>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

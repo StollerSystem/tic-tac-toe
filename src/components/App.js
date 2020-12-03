@@ -2,9 +2,9 @@ import React from 'react';
 import Game from './Game';
 
 function App() {
-  return(
+  return (
     <div className="container main">
-      <Game/>
+      <Game />
     </div>
   );
 }
